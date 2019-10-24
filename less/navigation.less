@@ -8,7 +8,7 @@ header{
         .displayFlex(row, space-between, center);
         width: 100%;
         padding: 3% 2%;
-        border-bottom: 1px dotted @navigation-border;
+        border-bottom: 2px dashed @navigation-border;
 
         div:first-child{
             max-width: 800px;
@@ -26,7 +26,9 @@ header{
             .displayFlex(row, space-between, center);
 
             @media @mobile{
-                width: 100%;
+                width: 95%;
+                margin: 0 auto;
+                margin-top: 3%;
             }
 
             a{
@@ -46,10 +48,14 @@ header{
         .displayFlex(column, center, center);
         max-width: 800px;
         padding: 0 0 3% 0;
-        border-bottom: 1px dotted @navigation-border;
+        border-bottom: 2px dashed @navigation-border;
+
+        @media @tablet{
+            max-width: 95%;
+        }
 
         .headerImg{
             margin: 0 0 5% 0;
-        }
+        } // end headerImg
     }// end section
 } // end header
