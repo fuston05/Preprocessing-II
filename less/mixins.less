@@ -25,3 +25,13 @@
       width: 95%;
     }
   }
+
+  .borderToColor(@fromColor, @toColor){
+    @keyframes border {
+        from {border-bottom: 2px solid @fromColor;}
+        to {border-bottom: 2px solid @toColor;}
+    }
+
+    animation-name: border;
+    animation-duration: 1s;
+  }
