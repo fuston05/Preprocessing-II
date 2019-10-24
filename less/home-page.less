@@ -1,3 +1,45 @@
+// Navigation Styles here 
+
+header{
+  .displayFlex(row, center, center);
+  flex-direction: column;
+
+  .top{
+    .displayFlex(row, space-between, center);
+    width: 100%;
+    padding: 3% 2%;
+    border-bottom: 2px dashed @navigation-border;
+
+    div:first-child{
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        .displayFlex(row, space-between, center);
+
+        @media @mobile{
+            .displayFlex(column, space-between, center);
+        }
+    }// end div:first-child
+      
+      
+  }// end top
+
+  section{
+      .displayFlex(column, center, center);
+      max-width: 800px;
+      padding: 0 0 3% 0;
+      border-bottom: 2px dashed @navigation-border;
+
+      @media @tablet{
+          max-width: 95%;
+      }
+
+      .headerImg{
+          margin: 0 0 5% 0;
+      } // end headerImg
+  }// end section
+} // end header
+
 .home {
 
   .content-section {
@@ -88,6 +130,10 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn{
+        .btn(@button-bg, #fff);
+      }
 
       @media @mobile{
         width: 95%;

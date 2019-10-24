@@ -7,3 +7,21 @@
     align-items: @align;
 }
 
+.btn(@bgColor, @color){
+    background-color: @bgColor;
+    color: @color;
+    padding: 5% 5%;
+    font-size: 1.5rem;
+    width: 83%;
+    border-radius: 5px;
+    text-align: center;
+  
+    &:hover{
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  
+    @media @mobile{
+      width: 95%;
+    }
+  }

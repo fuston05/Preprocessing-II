@@ -1,61 +1,26 @@
 // Navigation Styles here 
 
-header{
-    .displayFlex(row, center, center);
-    flex-direction: column;
-
-    .top{
-        .displayFlex(row, space-between, center);
-        width: 100%;
-        padding: 3% 2%;
-        border-bottom: 2px dashed @navigation-border;
-
-        div:first-child{
-            max-width: 800px;
-            width: 100%;
-            margin: 0 auto;
-            .displayFlex(row, space-between, center);
-
-            @media @mobile{
-                .displayFlex(column, space-between, center);
-            }
-        }// end div:first-child
         
-        nav{
-            width: 50%;
-            .displayFlex(row, space-between, center);
+nav{
+    width: 50%;
+    .displayFlex(row, space-between, center);
 
-            @media @mobile{
-                width: 95%;
-                margin: 0 auto;
-                margin-top: 3%;
-            }
+    @media @mobile{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
 
-            a{
-                font-size: 2rem;
-                color: @font-color;
-                text-decoration: none;
-                
-                &:hover{
-                    cursor: pointer;
-                    opacity: 0.7;
-                } //end hover
-            }// end a
-        }//end nav
-    }// end top
+    a{
+        font-size: 2rem;
+        color: @font-color;
+        text-decoration: none;
+        
+        &:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        } //end hover
+    }// end a
+}//end nav
 
-    section{
-        .displayFlex(column, center, center);
-        max-width: 800px;
-        padding: 0 0 3% 0;
-        border-bottom: 2px dashed @navigation-border;
-
-        @media @tablet{
-            max-width: 95%;
-        }
-
-        .headerImg{
-            margin: 0 0 5% 0;
-        } // end headerImg
-    }// end section
-} // end header
+    

@@ -173,23 +173,39 @@ img {
     width: 95%;
   }
 }
-.btn {
-  background-color: teal;
-  padding: 5% 5%;
-  color: #fff;
-  font-size: 1.5rem;
-  width: 83%;
-  border-radius: 5px;
-  text-align: center;
+nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.btn:hover {
+@media (max-width: 500px) {
+  nav {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 3%;
+  }
+}
+nav a {
+  font-size: 2rem;
+  color: #212529;
+  text-decoration: none;
+}
+nav a:hover {
   cursor: pointer;
   opacity: 0.7;
 }
-@media (max-width: 500px) {
-  .btn {
-    width: 95%;
-  }
+.footer {
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
+}
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
 }
 header {
   display: flex;
@@ -224,29 +240,6 @@ header .top div:first-child {
     align-items: center;
   }
 }
-header .top nav {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 500px) {
-  header .top nav {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 3%;
-  }
-}
-header .top nav a {
-  font-size: 2rem;
-  color: #212529;
-  text-decoration: none;
-}
-header .top nav a:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
 header section {
   display: flex;
   flex-direction: column;
@@ -263,17 +256,6 @@ header section {
 }
 header section .headerImg {
   margin: 0 0 5% 0;
-}
-.footer {
-  width: 100%;
-  border-top: 2px dashed silver;
-  background: #FFEBCD;
-}
-.footer p {
-  text-align: center;
-  color: #212529;
-  font-size: 1.6rem;
-  padding: 20px;
 }
 .home .content-section {
   margin: 30px 0;
@@ -366,6 +348,24 @@ header section .headerImg {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.home .content-pick .destination .btn {
+  background-color: #17A2B8;
+  color: #fff;
+  padding: 5% 5%;
+  font-size: 1.5rem;
+  width: 83%;
+  border-radius: 5px;
+  text-align: center;
+}
+.home .content-pick .destination .btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    width: 95%;
+  }
 }
 @media (max-width: 500px) {
   .home .content-pick .destination {
