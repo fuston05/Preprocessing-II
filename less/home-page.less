@@ -1,21 +1,77 @@
+// Navigation Styles here 
+
+header{
+  .displayFlex(row, center, center);
+  flex-direction: column;
+
+  .top{
+    .displayFlex(row, space-between, center);
+    width: 100%;
+    padding: 3% 2%;
+    border-bottom: 2px dashed @navigation-border;
+
+    div:first-child{
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        .displayFlex(row, space-between, center);
+
+        @media @mobile{
+            .displayFlex(column, space-between, center);
+        }
+    }// end div:first-child
+      
+      
+  }// end top
+
+  section{
+      .displayFlex(column, center, center);
+      max-width: 800px;
+      padding: 0 0 3% 0;
+      border-bottom: 2px dashed @navigation-border;
+
+      @media @tablet{
+          max-width: 95%;
+      }
+
+      .headerImg{
+          margin: 0 0 5% 0;
+      } // end headerImg
+  }// end section
+} // end header
+
 .home {
 
   .content-section {
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-   
+    @media @tablet{
+      width: 95%;
+      margin: 5% auto;
+    }
+
+   @media @mobile{
+     .displayFlex(column, space-around, center);
+   }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
-    }
+      @media @mobile{
+        width: 95%;
+      }
+    } // end .text-content
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile{
+        width: 95%;
+      }
 
       img {
         border-radius: 10px;
@@ -27,9 +83,18 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile{
+      flex-direction: column-reverse;
+      width: 95%;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile{
+        padding: 0;
+      }
     }
 
     .img-content {
@@ -37,7 +102,7 @@
       padding-left: 0;
     }
   }
-
+ 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
@@ -53,9 +118,27 @@
     display: flex;
     justify-content: space-between;
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
+    @media @tablet{
+      width: 95%;
+      margin: 0 auto;
     }
+
+    @media @mobile{
+      flex-direction: column;
+    }
+
+    .destination {
+      width: 31%;
+      margin-bottom: 30px;
+
+      .btn{
+        .btn(@button-bg,#fff);
+      }
+
+      @media @mobile{
+        width: 95%;
+        margin: 0 auto 5% auto;
+      }
+    }// end .destination
   }
 }// home
